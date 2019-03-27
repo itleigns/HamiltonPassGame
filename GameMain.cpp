@@ -247,6 +247,7 @@ void OneProblem(int h,int w,int ho){
 	}
 }
 int main(int argc,char** argv){
+	cout << "(a):left (w):up (d):right (s):down (r):reset" << endl;
 	OneProblem(4,4,2);
 	cout << "Clear!!!!!" << endl;
 	for(int i=1;i<9;i++){
