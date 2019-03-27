@@ -155,7 +155,15 @@ int mapstate[200];
 void WriteMap(int h,int w){
 	for(int i=0;i<h;i++){
 		for(int j=0;j<w;j++){
-			cout << mapstate[i*w+j];
+			if(mapstate[i*w+j] == 0){
+				cout << '.';
+			}
+			if(mapstate[i*w+j] == 1){
+				cout << '#';
+			}
+			if(mapstate[i*w+j] == 2){
+				cout << 'P';
+			}
 		}
 		cout << endl;
 	}
@@ -241,17 +249,17 @@ void OneProblem(int h,int w,int ho){
 int main(int argc,char** argv){
 	OneProblem(4,4,2);
 	cout << "Clear!!!!!" << endl;
-	for(int i=0;i<9;i++){
+	for(int i=1;i<9;i++){
 		cout << endl;
 	}
 	OneProblem(5,5,3);
 	cout << "Clear!!!!!" << endl;
-	for(int i=0;i<9;i++){
+	for(int i=1;i<9;i++){
 		cout << endl;
 	}
 	OneProblem(6,6,4);
 	cout << "Congratulation!!!!!!" << endl;
-	for(int i=0;i<9;i++){
+	for(int i=1;i<9;i++){
 		cout << endl;
 	}
 	return 0;
